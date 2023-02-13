@@ -55,7 +55,7 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'
     -- For Atomic color Higlighting
     use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
-    -- Indent line
+    -- Indent lin
     use "lukas-reineke/indent-blankline.nvim"
     -- TreeNav
     use {

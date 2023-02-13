@@ -64,5 +64,12 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
     }
+    -- Git Stuff
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+    -- Icons
+    use 'nvim-tree/nvim-web-devicons'
+    -- Float Terminal
+    use 'voldikss/vim-floaterm'
+
 end)
 

@@ -25,3 +25,5 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- Make Exec
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+-- Go to normal mode
+vim.keymap.set("t", "<leader><esc>", "<C-\\><c-n>", { noremap = true, silent=true })

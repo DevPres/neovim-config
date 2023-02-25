@@ -1,6 +1,3 @@
-
--- disable netrw at the very start of your init.lua (strongly advised)
-
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
@@ -8,7 +5,10 @@ vim.opt.termguicolors = true
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
-    width = 30,
+    width = {
+        max = 30,
+        min = 30,       
+    },
     mappings = {
       list = {
         { key = "u", action = "dir_up" },
@@ -17,8 +17,5 @@ require("nvim-tree").setup({
   },
   renderer = {
     group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
   },
 })

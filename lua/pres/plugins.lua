@@ -16,27 +16,15 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     -- LSP
     use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
-        requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {'williamboman/mason.nvim'},           -- Optional
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},         -- Required
-            {'hrsh7th/cmp-nvim-lsp'},     -- Required
-            {'hrsh7th/cmp-buffer'},       -- Optional
-            {'hrsh7th/cmp-path'},         -- Optional
-            {'saadparwaiz1/cmp_luasnip'}, -- Optional
-            {'hrsh7th/cmp-nvim-lua'},     -- Optional
-
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},             -- Required
-            {'rafamadriz/friendly-snippets'}, -- Optional
-        }
+        -- LSP Support
+        'neovim/nvim-lspconfig',             -- Required
+        'williamboman/mason.nvim',           -- Optional
+        'williamboman/mason-lspconfig.nvim', -- Optional
     }
+    use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
+    use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+    use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+    use 'L3MON4D3/LuaSnip' -- Snippets plugin
     -- Status Line
     use {
         'nvim-lualine/lualine.nvim',
@@ -70,11 +58,6 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-web-devicons'
     -- Float Terminal
     use 'voldikss/vim-floaterm'
-    -- Show Lsp Error
-    use {
-        "folke/trouble.nvim",
-        requires = "nvim-tree/nvim-web-devicons",
-    }
     -- BufferLine
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 end)

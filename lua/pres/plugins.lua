@@ -70,6 +70,12 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-web-devicons'
     -- Float Terminal
     use 'voldikss/vim-floaterm'
-
+    -- Show Lsp Error
+    use {
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
+    }
+    -- BufferLine
+    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 end)
 

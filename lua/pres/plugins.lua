@@ -60,5 +60,8 @@ return require('packer').startup(function(use)
     use 'voldikss/vim-floaterm'
     -- BufferLine
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+    use 'windwp/nvim-ts-autotag'
+    -- Copilot
+    use 'github/copilot.vim'
 end)
 

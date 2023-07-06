@@ -6,6 +6,8 @@
     -- For moving Blocks in vis. mode
     vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
     vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+    -- For copyng Blocks in vis. mode
+    vim.keymap.set("v", "<leader>pp", "y'>p")
     -- Remove space line empty under, an the cursor stay at start
     vim.keymap.set("n", "J", "mzJ`z")
     -- Stay in the middle bro
@@ -27,6 +29,11 @@
     vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
     -- switch buffer
     vim.keymap.set("n", "<M-Tab>", ":bn<CR>", { silent = true })
+
+    vim.keymap.set("n", "<C-Tab>", function() 
+      vim.cmd(':NvimTreeFocus'); 
+    end)
+     
 
 -- Go to normal mode
 vim.keymap.set("t", "<leader><esc>", "<C-\\><c-n>", { noremap = true, silent=true })

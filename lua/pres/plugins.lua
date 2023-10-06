@@ -1,4 +1,4 @@
----- Ensure PAcker installation
+  ---- Ensure PAcker installation
 --local ensure_packer = function()
 --    local fn = vim.fn
 --    local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -63,5 +63,16 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-ts-autotag'
     -- Copilot
     use 'github/copilot.vim'
+    -- DAP
+    use { "mfussenegger/nvim-dap" }
+    use {
+      "microsoft/vscode-js-debug",
+      opt = true,
+      run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out" 
+    }
+    use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    -- Git blamer
+    use { "braxtons12/blame_line.nvim" }
 end)
 
